@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <title>Un titulo</title>  
+    </h:head>
+	
+	<h:body>   
+	    <h:outputStylesheet library="css" name="estilos.css"/> 
+		
+		<h:form id="formId1">
+		 
+			<script type="text/javascript">
+		        //<![CDATA[
+		        function miFuncion(){
+                	alert("dfdfd");
+     	        }
+		        //]]>
+           </script>
+	                  
+		   <div id="content-wrapper">  	      
+		      
+		      <a4j:region id="reg0">
+			      <h:inputText value="#{ejemploBB.input1}">
+			     
+			      	<f:ajax event="keyup" render="out1 out2"></f:ajax>
+			      </h:inputText>
+		      </a4j:region>
+		      
+		      <br />
+		      
+		      <h:outputText id="out1" value="#{ejemploBB.hora}" />
+		      
+		      <br />
+		      
+		      <a4j:region id="reg1">
+		            <h:outputText id="out2" value="#{ejemploBB.hora}" />
+		            <br />
+		      		REg1: #{ejemploBB.hora}
+		      </a4j:region>
+		      
+		      <br />
+		      
+		      <a4j:region id="reg2">
+		      	    REg2: #{ejemploBB.hora}
+		      </a4j:region>
+	       </div>
+	   </h:form>
+	       
+	       
+</h:body> 
+</html>

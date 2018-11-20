@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <title>Un titulo</title>  
+    </h:head>
+	
+	<h:body>   
+	    <h:outputStylesheet library="css" name="estilos.css"/> 
+		
+		<h:form id="formId1">
+		 
+			<script type="text/javascript">
+		        //<![CDATA[
+		        function miFuncion(){
+                	alert("dfdfd");
+     	        }
+		        //]]>
+           </script>
+	                  
+		   <div id="content-wrapper">  	      
+		       Aqui toy  ...
+	       </div>
+	       
+	       
+	       
+	            <h:outputText value="Combo 1" />
+	            <h:selectOneMenu value="#{ejemploBB.valorCmb1}" id="sl1" required="true">
+	            	 <f:selectItem itemValue="0" itemLabel="Option 1" />
+				     <f:selectItem itemValue="1" itemLabel="Option 2" />
+				     <f:selectItem itemValue="2" itemLabel="Option 3" />
+				     
+				     <a4j:ajax event="change" render="oupHora" execute="@form" immediate="true"></a4j:ajax> 
+	            </h:selectOneMenu>
+	            <rich:message for="sl1"></rich:message>
+	           
+				<br />
+				
+				 <h:outputText value="Combo 2" />
+	            <h:selectOneMenu value="#{ejemploBB.valorCmb2}" id="sl2" required="true" >
+	            	 <f:selectItems value="#{ejemploBB.listacmb1_items()}" var="c"
+   						itemLabel="#{c}" itemValue="#{c}" />
+				     <a4j:ajax event="change" render="oup5" execute="@form" immediate="true"></a4j:ajax> 
+	            </h:selectOneMenu>
+	            <rich:message for="sl2"></rich:message>
+				
+	    
+	       
+	       <br />
+	       
+	       <h:outputText id="oup5" value="#{ejemploBB.valorCmb2}" />
+	       <h:outputText id="oupHora" value="#{ejemploBB.hora}" />
+	       
+	       <br />
+	       
+	       <a4j:commandButton value="Request" action="#{ejemploBB.request()}"></a4j:commandButton>
+	       
+           <h:commandButton value="Regresar" action="/pages/pruebaValidacion.xhtml" />
+	  	</h:form>
+	  	
+	  	<h3>Otro formulario</h3>
+	  	
+	  	<h:form id="formId2">
+	        <h:inputText id="t1" value="#{ejemploBB.input1}" required="true" requiredMessage="Ta vacio pana">
+	            <!--  
+	            <a4j:ajax event="keyup" render="out" execute="t1, t2"/>
+	            -->
+	            <f:ajax event="keyup" render="out" execute="t2"></f:ajax>
+        	</h:inputText>
+        	<h:outputText value="#{ejemploBB.hora}" id="out" />
+	        
+	        <br />
+	        
+	        <h:inputText id="t2" value="#{ejemploBB.input1}" required="true" requiredMessage="Ta vacio pana">
+	            <!--  <a4j:ajax event="change" execute="@form"/>-->
+	        </h:inputText>    
+	        
+	        <h:commandButton value="hButton con ajax" action="/pages/pruebaValidacion.xhtml">
+	        	<f:ajax execute="t1" render="@form"></f:ajax>
+	        </h:commandButton>
+	        
+	        <h:commandButton value="Regresar" action="/pages/pruebaValidacion.xhtml" />
+	        <a4j:commandButton value="Regresar ajax" action="/pages/pruebaValidacion.xhtml"></a4j:commandButton>
+	        
+       </h:form>
+       
+       <h3>Tercer form</h3>
+       
+       <h:form id="formId3">
+       		<h:inputText id="inp1" value="" validatorMessage="Datos erroneos 1" >
+       			<f:validateLength minimum="3"></f:validateLength>
+       			<f:ajax event="keyup"></f:ajax>
+       		</h:inputText>
+       		<rich:message for="inp1"></rich:message>
+       		
+       		<br />
+       		
+       		<h:inputText id="inp2" value="" validatorMessage="Datos erroneos 2">
+       			<f:validateLength minimum="3"></f:validateLength>
+       		</h:inputText>
+       		<rich:message for="inp2"></rich:message>
+       		
+       		<br />
+       		
+       		<a4j:commandButton value="Enviar"></a4j:commandButton>
+       		
+       		<h:button outcome="/index" value="button">gfgfgf</h:button>
+       </h:form>
+       
+</h:body> 
+</html>

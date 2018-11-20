@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <title>#{uiLabel['tituloAplicacion']}</title>  
+    </h:head>
+	
+	<h:body>   
+	    <h:outputStylesheet library="css" name="estilos.css"/> 
+		
+		<h:form id="formId">
+		 
+			<script type="text/javascript">
+		        //<![CDATA[
+		        function miFuncion(){
+                	
+     	        }
+		        //]]>
+           </script>
+	                  
+		   <div id="content-wrapper">  	      
+		      <h1>Nuevo Proyecto</h1>   
+		      
+		      <a4j:commandButton value="Prueba" action="#{consultaBean.buscar}">
+	          </a4j:commandButton>
+	           			
+	       </div>
+	  	</h:form>
+</h:body> 
+</html>

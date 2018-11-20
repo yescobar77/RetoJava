@@ -1,0 +1,640 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 3.0 License
+
+Name       : Reinstated
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120326  
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: underline;
+	color: #222;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+body {
+	font-size: 11.5pt;
+	line-height: 1.75em;
+	color: #888;
+	/*background: #DFDADA url(images/bg.jpg) top center no-repeat;*/
+	letter-spacing: -0.02em;
+}
+
+body,input {
+	font-family: verdana, sans-serif;
+	color: #000;
+}
+
+br.clearfix {
+	clear: both;
+
+}
+
+h1,h2,h3,h4 {
+		
+	
+	/*text-transform: uppercase;*/
+	letter-spacing: -1px;
+	font-weight: normal;
+
+}
+
+h2 {
+	
+	font-size: 14px;
+	color: #E6E6E6;
+	font-family: sans-serif;
+	text-align: center;
+
+	
+}
+
+h3,h4 {
+	color: #222;
+	font-family: Oswald, sans-serif;
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	/*font-size: 0.9em;*/
+	color: #FFFFFF;
+	font-family: sans-serif;
+}
+img.alignleft {
+	margin: 5px 20px 20px 0;
+	float: left;
+}
+
+img.aligntop {
+	margin: 5px 0 20px 0;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+ul {
+	margin-bottom: 1.5em;
+}
+
+ul h4 {
+	margin-bottom: 0.35em;
+}
+
+#content {
+	width: 900px;
+	padding: 0;
+	float: left;
+	font-size: 11px;
+	font-family: sans-serif;
+	color: #000;
+
+}
+
+#header {
+	color: #000;
+	background: #2A47AF url(images/bg4.jpe) bottom center no-repeat;
+	width: 980px;
+  	height: 40px;
+}
+
+#logo {
+	position: absolute;
+	top: 100px;
+}
+
+#logo a {
+	color: #2E2EFE;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+}
+
+#logo h1 {
+	font-size: 2em;
+	font-family: Oswald, sans-serif;
+}
+
+
+#menu {
+	line-height: 40px;
+	font-family: Oswald, sans-serif;
+	padding: 0 35px 0 35px;
+	/*width: 910px;*/
+	width: 100%;
+	/*height: 1px;*/
+	height: 32px;
+	font-size: 12px;
+	background: #2A47AF;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+	text-align: center;
+}
+
+#menu {
+	/*text-transform: uppercase;*/
+	letter-spacing: -1px;
+	color: #FFFFFF;
+
+
+}
+
+#menu a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#menu ul {
+	list-style: none;
+}
+
+#menu ul li {
+	padding: 0 20px 0 20px;
+	height: 60px;
+	display: inline-block;
+}
+
+#menu ul li.first {
+	padding-left: 0;
+}
+
+#menu ul li.active {
+	background: #336177;
+}
+
+#menu .arrow {
+	display: inline-block;
+	margin: 0 0 0 0.5em;
+	position: relative;
+	width: 0;
+	height: 0;
+	top: -3px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 7px solid #254656;
+
+}
+
+#page {
+	color: #656565;
+	padding: 60px 35px 25px 35px;
+	margin: 0;
+	width: 980px;
+	height: 400px;
+	position: relative;
+
+}
+
+#page strong {
+	color: #222;
+}
+
+#page .section-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+#page .section-list li {
+	padding: 20px 0 20px 0;
+	clear: both;
+}
+
+#page ul {
+	list-style: none;
+}
+
+#page ul li {
+	padding: 10px 0 10px 0;
+	border-top: dotted 1px #CCC;
+}
+
+#page ul li.first {
+	padding-top: 0;
+	border-top: 0;
+}
+
+.box {
+	margin: 0 0 30px 0;
+	overflow: hidden;
+}
+
+#col1 {
+	float: left;
+	width: 310px;
+	overflow: hidden;
+}
+
+#col2 {
+	width: 310px;
+	overflow: hidden;
+	margin: 0 0 0 340px;
+}
+
+#search {
+	position: absolute;
+	top: 58px;
+	right: 35px;
+}
+
+#search input.form-text {
+	padding: 8px 42px 8px 12px;
+	width: 175px;
+	border: 0;
+	/*background: #294C5D url(images/search.gif) top right no-repeat;*/
+	border-top: solid 1px #1F3C49;
+	color: #D3DDE2;
+}
+
+#sidebar {
+	width: 225px;
+	margin: 0 0 0 685px;
+	padding: 0;
+	
+}
+
+#wrapper {
+        /*padding: 0 35px 0 35px;*/
+	padding: 0 0 0 0;
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	background: #FFF;	
+	/*margin: 0px auto 0 auto;*/
+	margin: 0px auto 0px auto;
+    position: absolute;
+}
+#splash {
+	/*height: 130px;*/
+	height: 100%;
+	position: relative;
+	/*width: 980px;*/
+	width: 100%;
+	background: #FFF;
+	overflow: hidden;
+	border: 2;
+}
+#content-wrapper {
+     /*padding: 0 35px 0 35px;*/
+	padding: 0 2% 0 2%;
+	width: 96%;	
+	/*position: relative;*/
+	background: #FFF;
+	/*margin: 0px auto 0 auto;*/
+	/*margin: 0px auto auto auto;*/
+	margin: 0 0 35px 0;
+    /*height:590px;*/
+
+}
+#footer {
+	color: #FFF;
+	line-height: 10px;
+	text-align: center;
+	padding: 6px 0 0px 0;
+	font-size: 0.8em;
+	background: #2A47AF;
+	margin: 0px 0px 0px 0px;
+	
+	position: absolute; 
+	bottom: 0;
+	width: 100%;
+}
+#footer a {
+	
+	color: #FFF;
+	background: #2A47AF
+
+}
+
+.dropotron {
+	min-width: 200px;
+	padding: 20px 15px 20px 15px;
+	background: #346176 url(images/bg4.jpg) top left no-repeat;
+	list-style: none;
+	line-height: 2.75em;
+	
+}
+
+.dropotron li {
+	text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+	color: #D3DDE2;
+	position: relative;
+	border-top: dotted 1px #4f798e;
+	padding: 0 20px 0 20px;
+	
+}
+
+.dropotron li:hover {
+	background: #294C5D;
+}
+
+.dropotron li:hover .arrow {
+	border-left-color: #153646;
+}
+
+.dropotron li.first {
+	border-top: 0;
+}
+
+.dropotron li.last {
+	border-bottom: 0;
+}
+
+.dropotron li a {
+	color: #E3EAED;
+	text-decoration: none;
+	
+}
+
+.dropotron .arrow {
+	display: inline-block;
+	margin: 0 0 0 0.5em;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 7px solid #254656;
+}
+encabezado{
+	color: #656565;
+	padding: 60px 35px 25px 35px;
+	margin: 0;
+	width: 980px;
+	height: 400px;
+	position: relative;
+	font-size: 1.2em;
+
+}
+h5 {
+	font-size: 1.2em;
+	color: #336177;
+}
+/* start - table */
+table {
+	border-collapse: collapse;
+}
+th strong {
+	color: #fff;
+
+	
+}
+tr {
+	height: 30px;
+}
+td {
+	border-left: 1px;
+	border-bottom: solid 1px #fff;
+	font-size: 11px;
+	
+}
+td.first,th.first {
+	border-left: 0px;
+}
+tr.row-a {
+	background: #122889;
+}
+tr.row-b {
+	background: #122889;
+}
+/* end - table */
+input.button { 
+	
+	
+	font: 12px Oswald, sans-serif; 
+	height: 30px;
+}
+
+.texto{
+	font-weight:bold;
+}
+
+.cabecera-columna-1{
+	
+}
+
+.cabecera-columna-2{
+	
+}
+
+.data-scroller{
+	
+	border-style:solid; 
+	border-width:1px;
+	border-color:blue;
+	
+	margin: auto;
+}
+
+.data-scroller_div{
+	
+	height: 100px;             /* height = H1 */
+	width: 550px;
+	
+	/*
+	background-color: #AAA;
+	
+	border-style:solid; 
+	border-width:1px;
+	border-color:yellow;
+	
+	
+		
+	position: relative;
+	left: 0%;                 
+	*/	
+
+	margin: auto;
+	padding:auto;
+}
+
+.x{
+	
+
+	
+}
+
+.radiow table{
+	border-style:solid; 
+	border-width:5px;
+	width: 100%;
+	
+}
+
+.radio{
+	
+	/*
+	background: yellow;
+	
+	border-style:solid; 
+	border-width:2px;
+	border-color:green;
+	*/
+	width:100%;
+	
+}
+
+.radio td{
+	/*
+	border-style:dashed; 
+	border-width:2px;
+	border-color:red;
+	*/
+	text-align:center;	
+	/*width: 50%, 25%, 25%;*/	
+}
+
+.divTablaResultado {
+   align: center; 
+   width: 100%;
+   height: 345px;
+   overflow: scroll;
+   
+   /*margin: 0px 0px 0px 0px;*/
+   padding: 3px 3px 0px 3px;
+   
+   border-style:solid; 
+   border-width:1px;
+   border-color:blue;	
+}
+/*clase que aplica a columnas de <rich:dataTable>*/
+.rf-dt-c{
+	font-size:10px;
+}
+/* columnas para <rich:dataTable/>*/
+.c1{
+	width: 8%;	
+	height:1%;
+}
+.c2{
+	width: 63%;	
+	height:1%;
+}
+.c3{
+	padding: 0px 0px 0px 20px;
+	width: 29%;	
+	height:1%;
+}
+
+/* columnas para <h:panelGrid/> */
+.col1{
+	width: 25%;	
+}
+.col2{
+	width: 35%;	
+}
+.col3{
+	width: 20%;	
+}
+.col4{
+	width: 20%;	
+}
+
+@media print {
+ .soloImprimir {display:block;}
+ .soloPantalla {display:none;}
+}
+			    
+@media screen {
+ .soloImprimir {display:none;}
+}
+
+
+.error {
+	
+    margin-left: 20px;
+    margin-top: 5px;   
+    float: left;
+    
+    display:inline;
+    /*width:35%*/;
+    
+    padding: 2px;
+    border: 1px solid red;
+    /*
+    background: #fbe3e4;
+    */
+    background: #fbe3e4 url('img/closed.png') no-repeat left center;
+	
+	text-indent:15px;
+}
+
+.info {
+	margin-left: 20px;
+    margin-top: 5px;
+    float: left;
+	
+	display:block;
+    width:35%;
+    	
+	background: #d5edf8 url('img/info.png') no-repeat left center;
+	text-indent:15px;
+}
+
+.error, .info { padding: 0.8em;
+        margin-bottom: 1em; 
+        border: 2px solid #ddd;
+ }
+ 
+ .rf-msgs-err {
+    margin: 10px;
+    padding: 10px 5px 10px 20px;
+    display:inline-block;
+    border: 2px solid #ddd;
+    background-color: #fbe3e4;
+    background-image: url('img/closed.png');
+}
+
+.rf-msgs-inf{
+	margin: 10px;
+    padding: 10px 5px 10px 28px;
+    display:inline-block;
+    border: 2px solid #ddd;
+    background-color: #E5FFEC;
+    background-image: url('img/ok.gif');
+}
+/*clase que aplica al header de <rich:dataTable>*/
+.rf-dt-hdr-c{
+	color:white;
+	background:#B0B0B0;	
+}
+
+.boton{
+	background: #2A47AF;
+	color:white;
+}
+
+input[type="submit"]{
+	background: #2A47AF;
+	color:white;
+}
+
+input[type="submit"]:hover{
+	background: #2A47AF;
+	color:white;
+}
+
+input[type="submit"]:disabled{
+	background: #D9D9D9;
+	color:CCCCCC;
+}
+
+input[type="text"]{
+	background: #FFF;
+	color:black;
+	height:18px; 
+}

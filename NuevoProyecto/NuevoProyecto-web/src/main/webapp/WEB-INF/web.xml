@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" >
+ 
+ 
+    <display-name>Nuevo proyecto</display-name>
+  
+  <!-- Change to "Production" when you are ready to deploy -->
+  <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+  </context-param>
+  
+  <!-- Welcome page -->
+  <welcome-file-list>
+    <!--<welcome-file>faces/index.xhtml</welcome-file>-->
+    <welcome-file>faces/pages/inicio.xhtml</welcome-file>
+  </welcome-file-list>
+  
+  <!-- JSF mapping -->
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <!-- Map these files with JSF -->
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.faces</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+ 
+ 
+	<!-- Definir este parámetro es más cómodo y más visual que usar el <ui:remove> 
+		de Facelets. -->
+	<context-param>
+		<description>Do not render comments in facelets (xhtml) pages. Default is false.</description>
+		<param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>javax.faces.CONFIG_FILES</param-name>
+		<param-value>/WEB-INF/faces-config.xml,/WEB-INF/faces-navigation.xml</param-value>
+	</context-param>
+
+    <context-param>
+    	<param-name>facelets.SKIP_COMMENTS</param-name>
+    	<param-value>true</param-value>
+	</context-param>
+    
+    <!-- Making the RichFaces skin spread to standard HTML controls -->
+    <context-param>
+        <param-name>org.richfaces.enableControlSkinning</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.richfaces.enableControlSkinningClasses</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.richfaces.LoadStyleStrategy</param-name>
+        <param-value>ALL</param-value>
+    </context-param> 
+    <context-param>
+        <param-name>org.richfaces.LoadScriptStrategy</param-name>
+        <param-value>ALL</param-value>
+    </context-param>
+    <!-- Plugging the "Blue Sky" skin into the project -->
+    <context-param>
+        <param-name>org.richfaces.skin</param-name>
+        <param-value>DEFAULT</param-value>
+    </context-param>
+ </web-app>
